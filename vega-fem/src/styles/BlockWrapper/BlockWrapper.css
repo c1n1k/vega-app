@@ -1,0 +1,37 @@
+.BlockWrapper {
+  display: flex;
+  flex-direction: column;
+
+  height: 89.8vh;
+
+  border: 1px solid var(--color-bg-secondary);
+  border-bottom: none;
+}
+
+.BlockWrapper__title {
+  padding: 0 13px;
+
+  display: flex;
+  align-items: center;
+
+  height: 20px;
+
+  color: var(--color-typo-primary);
+  border-bottom: 1px solid var(--color-bg-secondary);
+  opacity: 0.75;
+}
+
+.BlockWrapper__title .Text {
+  margin-right: 7px;
+}
+
+.BlockWrapper__content {
+  display: grid;
+
+  grid-template-columns: 3.4fr 6.9fr;
+  height: 100%;
+}
+
+.BlockWrapper__content-column {
+  box-sizing: border-box;
+}
