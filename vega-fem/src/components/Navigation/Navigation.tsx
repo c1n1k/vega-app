@@ -41,7 +41,7 @@ export const Navigation = (): React.ReactElement => {
     }) as NavItem,
   ];
   const [valueTab, setValueTab] = useState<Array<NavItem> | null>(currentTab);
-  // перемещение по исптории вперед/назад
+  // перемещение по истории вперед/назад
   history.listen((location) => {
     const switchTab = [
       tabs.find((element) => {

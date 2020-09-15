@@ -23,6 +23,16 @@
         position: relative;
         z-index: 1;
       }
+      .main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main > div {
+        flex-grow: 1;
+        display: flex;
+      }
     </style>
     <!--
     This CSP allows any SSL-enabled host, but you should limit these directives further to increase your app's security.
@@ -97,7 +107,7 @@
           <div class="header">
             <application name="@vega/header" props="authToken, fetch"></application>
           </div>
-          <main>
+          <main class="main">
             <route default>
               <application name="@vega/project"></application>
             </route>

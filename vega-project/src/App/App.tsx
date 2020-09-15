@@ -1,12 +1,14 @@
 import React from 'react';
-import { ProjectsPage } from './App';
 import { BrowserRouter } from "react-router-dom";
 import { Root as VegaRoot } from '@gpn-prototypes/vega-root';
+import { ProjectsPage } from '../ProjectsPage';
 
-export default function Root(props) {
+import {cnApp} from './cn-app'
+
+export const App = (props) => {
   return (
     <BrowserRouter basename="projects/">
-      <VegaRoot defaultTheme="dark">
+      <VegaRoot defaultTheme="dark" className={cnApp()}>
         <ProjectsPage />
       </VegaRoot>
     </BrowserRouter>
