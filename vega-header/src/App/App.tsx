@@ -4,7 +4,7 @@ import { Header, NavItemType } from '@gpn-prototypes/vega-header';
 import { Text } from '@gpn-prototypes/vega-text';
 import { Root as VegaRoot } from '@gpn-prototypes/vega-root';
 
-export default function Root(props) {
+export function App(props) {
   props.fetch();
 
   const navItems = [

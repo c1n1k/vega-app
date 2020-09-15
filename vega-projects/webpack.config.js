@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = (webpackConfigEnv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: 'vega',
-    projectName: 'project',
+    projectName: 'projects',
     webpackConfigEnv,
   });
 
@@ -18,6 +18,14 @@ module.exports = (webpackConfigEnv) => {
     // modify the webpack config however you'd like to by adding to this object
     module: {
       rules: [
+        {
+          test: /\.(png|jpe?g|gif)$/i,
+          use: [
+            {
+              loader: 'file-loader',
+            },
+          ],
+        },
         {
           test: /\.css$/,
           use: [

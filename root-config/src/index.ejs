@@ -80,7 +80,7 @@
           "@vega/root-config": "//localhost:9000/vega-root-config.js",
           "@vega/header": "//localhost:9001/vega-header.js",
           "@vega/auth": "//localhost:9003/vega-auth.js",
-          "@vega/project": "//localhost:9004/vega-project.js",
+          "@vega/projects": "//localhost:9004/vega-projects.js",
           "@vega/fem": "//localhost:8080/vega-fem.js"
         }
       }
@@ -109,9 +109,9 @@
           </div>
           <main class="main">
             <route default>
-              <application name="@vega/project"></application>
+              <application name="@vega/projects"></application>
             </route>
-            <route path="fem" base="/projects">
+            <route path="fem" base="/projects/">
               <application name="@vega/fem"></application>
             </route>
           </main>

@@ -1,0 +1,16 @@
+.PageLayout {
+  display: grid;
+
+  width: 100%;
+  min-height: 100vh;
+
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  grid-template-areas: 'body';
+
+  background-color: var(--color-bg-default);
+
+  &__Body {
+    grid-area: body;
+  }
+}
