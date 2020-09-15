@@ -80,6 +80,7 @@
     "@gpn-prototypes/vega-carousel": "^0.0.8",
     "@gpn-prototypes/vega-checkbox": "^0.1.6",
     "@gpn-prototypes/vega-choice-group": "^0.1.9",
+    "@gpn-prototypes/vega-dropdown": "^1.2.5",
     "@gpn-prototypes/vega-form": "^0.1.8",
     "@gpn-prototypes/vega-hooks": "^0.5.0",
     "@gpn-prototypes/vega-logo": "^0.0.5",

@@ -9,7 +9,7 @@ import './App.css';
 
 export const rootComponent = () => (
   <Provider store={store}>
-    <BrowserRouter basename="projects/fem/">
+    <BrowserRouter basename="/projects/fem">
       <App />
     </BrowserRouter>
   </Provider>

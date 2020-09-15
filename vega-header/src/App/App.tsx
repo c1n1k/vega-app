@@ -10,12 +10,12 @@ export function App(props) {
   const navItems = [
     {
       name: 'Экономика проекта',
-      url: 'fem',
+      url: '/fem',
       isActive: true,
     },
     {
       name: 'Логика проекта',
-      url: 'logic',
+      url: '/logic',
     },
   ];
   const menuItems = [
