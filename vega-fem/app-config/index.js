@@ -3,7 +3,7 @@ const path = require('path');
 const root = process.env.PROJECT_ROOT_DIR || path.join(__dirname, '..');
 
 const getAppConfig = () => ({
-  entry: path.join(root, 'src/index.tsx'),
+  entry: path.join(root, 'src/singleSpaEntry.tsx'),
   root,
   buildDirPath: path.resolve(root, 'dist'),
   mode: process.env.NODE_ENV || 'development',

@@ -2,12 +2,9 @@ import * as React from 'react';
 import { Button } from '@gpn-prototypes/vega-button';
 import { ChoiceGroup } from '@gpn-prototypes/vega-choice-group';
 import { Link } from 'react-router-dom';
-import { Checkbox } from '@gpn-prototypes/vega-checkbox';
 import { IconBookmarkFilled } from '@gpn-prototypes/vega-icons';
-import { Logo } from '@gpn-prototypes/vega-logo';
 import { Text } from '@gpn-prototypes/vega-text';
 import { TextField } from '@gpn-prototypes/vega-text-field';
-import { Root as VegaRoot } from '@gpn-prototypes/vega-root';
 
 import { IconProps } from '@gpn-design/uikit/Icon';
 

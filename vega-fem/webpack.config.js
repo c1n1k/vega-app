@@ -32,7 +32,7 @@ const femFeWebpack = {
   devServer: {
     historyApiFallback: true,
     proxy: {
-      '/graphql': 'http://localhost:8080',
+      '/graphql': 'http://outsourcing.nat.tepkom.ru:38300/',
     },
   },
 };
@@ -46,10 +46,11 @@ module.exports = (webpackConfigEnv) => {
     webpackConfigEnv,
   });
 
-  return webpackMerge.smart(defaultConfig, commonWebpack(), {
+  return webpackMerge.smart(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
-    ...gpnWebpack,
-    ...femFeWebpack,
+    // ...gpnWebpack,
+    // ...femFeWebpack,
+    entry: ['./src/singleSpaEntry.tsx'],
     module: {
       rules: [
         {
