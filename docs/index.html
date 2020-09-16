@@ -1,0 +1,38 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><title>Root Config</title><style>body,
+      html {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      .header {
+        position: relative;
+        z-index: 1;
+      }
+      .main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .main > div {
+        flex-grow: 1;
+        display: flex;
+      }</style><meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:* data:; script-src 'unsafe-inline' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';"/><meta name="importmap-type" content="systemjs-importmap"/><script type="systemjs-importmap">{
+        "imports": {
+          "react": "https://cdn.jsdelivr.net/npm/react@16.13.0/umd/react.production.min.js",
+          "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.0/umd/react-dom.production.min.js",
+          "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js",
+          "@vega/root-config": "./vega-root-config.js",
+          "@vega/header": "./vega-header.js",
+          "@vega/auth": "./vega-auth.js",
+          "@vega/projects": "./vega-projects.js",
+          "@vega/fem": "./vega-fem.js"
+        }
+      }</script><link rel="preload" href="https://cdn.jsdelivr.net/npm/single-spa@5.5.5/lib/system/single-spa.min.js" as="script"/><script src="https://cdn.jsdelivr.net/npm/import-map-overrides@1.16.0/dist/import-map-overrides.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/system.min.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/amd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs@6.4.0/dist/extras/named-exports.min.js"></script><template id="single-spa-layout"><single-spa-router><route path="login"><application name="@vega/auth"></application></route><route path="projects"><div class="header"><application name="@vega/header" props="authToken, fetch"></application></div><main class="main"><route default><application name="@vega/projects"></application></route><route path="fem"><application name="@vega/fem"></application></route></main></route><route default><application name="@vega/auth"></application></route></single-spa-router></template></head><body><script>System.import('@vega/root-config');</script><import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full></body></html>
