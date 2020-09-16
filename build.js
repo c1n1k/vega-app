@@ -34,6 +34,7 @@ async function build() {
   for (dir of dirs) {
     process.chdir(dir);
 
+    exec('yarn install');
     exec('yarn build');
 
     const files = await ls(path.join(dir, 'dist'));
