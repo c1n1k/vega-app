@@ -35,7 +35,7 @@ export function fetchOPEXSet(): ThunkAction<Promise<void>, {}, {}, AnyAction> {
     dispatch(OPEXSetFetchInit());
 
     try {
-      const response = await fetch(`graphql/${projectIdFromLocalStorage()}`, {
+      const response = await fetch(`/graphql/${projectIdFromLocalStorage()}`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify({

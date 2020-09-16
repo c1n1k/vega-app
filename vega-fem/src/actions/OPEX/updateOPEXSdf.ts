@@ -29,7 +29,7 @@ export function changeOPEXSdf(sdfFlag: boolean): ThunkAction<Promise<void>, {}, 
     dispatch(OPEXSetChangeSdfInit());
 
     try {
-      const response = await fetch(`graphql/${projectIdFromLocalStorage()}`, {
+      const response = await fetch(`/graphql/${projectIdFromLocalStorage()}`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify({

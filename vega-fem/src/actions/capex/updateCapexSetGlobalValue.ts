@@ -35,7 +35,7 @@ export const requestUpdateCapexGlobalValue = (
 
     try {
       /* TODO: set project id dynamically */
-      const response = await fetch(`graphql/${projectIdFromLocalStorage()}`, {
+      const response = await fetch(`/graphql/${projectIdFromLocalStorage()}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

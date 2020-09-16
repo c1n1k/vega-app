@@ -37,7 +37,7 @@ export function autoexportChange(
     dispatch(OPEXAutoexportChangeInit());
 
     try {
-      const response = await fetch(`graphql/${projectIdFromLocalStorage()}`, {
+      const response = await fetch(`/graphql/${projectIdFromLocalStorage()}`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify({

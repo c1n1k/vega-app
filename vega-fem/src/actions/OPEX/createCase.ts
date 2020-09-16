@@ -36,7 +36,7 @@ export function createCase(autoexport: OPEXGroup): ThunkAction<Promise<void>, {}
     dispatch(OPEXCreateCaseInit());
 
     try {
-      const response = await fetch(`graphql/${projectIdFromLocalStorage()}`, {
+      const response = await fetch(`/graphql/${projectIdFromLocalStorage()}`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify({

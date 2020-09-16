@@ -35,7 +35,7 @@ export function changeOPEXSet(): ThunkAction<Promise<void>, {}, {}, AnyAction> {
     dispatch(OPEXSetChangeInit());
 
     try {
-      const response = await fetch(`graphql/${projectIdFromLocalStorage()}`, {
+      const response = await fetch(`/graphql/${projectIdFromLocalStorage()}`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify({
