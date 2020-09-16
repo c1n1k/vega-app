@@ -11,10 +11,12 @@ import './styles/colors.css';
 
 export const App = (): React.ReactElement => {
   return (
-    <Theme className="App" preset={presetGpnDark}>
-      <Header />
-      <Navigation />
-      <Main />
-    </Theme>
+    <div className="fem">
+      <Theme className="App" preset={presetGpnDark}>
+        <Header />
+        <Navigation />
+        <Main />
+      </Theme>
+    </div>
   );
 };
