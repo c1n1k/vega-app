@@ -62,7 +62,6 @@
     "jest-cli": "^25.2.7",
     "lint-staged": "^10.2.13",
     "postcss-loader": "^4.0.1",
-    "postcss-prefixer": "^2.1.2",
     "postcss-prefixwrap": "^1.17.0",
     "single-spa-react": "^2.14.0",
     "style-loader": "^1.2.1",
