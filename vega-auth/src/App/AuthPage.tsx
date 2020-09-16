@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button } from '@gpn-prototypes/vega-button';
 import { Carousel } from '@gpn-prototypes/vega-carousel';
 import { Checkbox } from '@gpn-prototypes/vega-checkbox';
@@ -35,6 +36,7 @@ const initialState = {
 export const AuthPage: React.FC = () => {
   const [state, setState] = React.useState<State>(initialState);
   const [idx, setIdx] = React.useState(0);
+  const history = useHistory();
 
   const handleChange = ({ value, name }: TextFieldOnChangeArgs): void => {
     if (name) {
@@ -49,6 +51,11 @@ export const AuthPage: React.FC = () => {
     setState({ ...state, remember: !state.remember });
   };
 
+  const handleSubmit = (e: React.FormEvent): void => {
+    e.preventDefault();
+    history.push('/projects');
+  };
+
   const firstSlideCaption = 'Какой-то текст про Вега 2.0.';
 
   const secondSlideCaption =
@@ -61,7 +68,7 @@ export const AuthPage: React.FC = () => {
           <div className={cnAuthPage('GazpromLogo')}>
             <GazpromLogo />
           </div>
-          <Form className={cnAuthPage('Form')}>
+          <Form className={cnAuthPage('Form')} onSubmit={handleSubmit}>
             <Logo className={cnAuthPage('Logo')} />
             <Form.Row>
               <Form.Field>
