@@ -15,7 +15,7 @@ module.exports = (webpackConfigEnv) => {
     devServer: {
       historyApiFallback: true,
       proxy: {
-        '/graphql': 'http://outsourcing.nat.tepkom.ru:38080/',
+        '/graphql': 'http://outsourcing.nat.tepkom.ru:38300/',
       },
     },
     plugins: [
