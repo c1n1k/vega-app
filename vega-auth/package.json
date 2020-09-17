@@ -19,7 +19,7 @@
     }
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --port 9003",
     "build": "webpack --mode=production",
     "analyze": "webpack --mode=production --env.analyze=true",
     "format": "prettier --write '{src,types,scripts}/**/*.{json,{j,t}s{,x},css,}'",

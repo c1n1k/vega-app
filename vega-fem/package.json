@@ -19,7 +19,7 @@
   },
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --progress",
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --mode development --port 9005",
     "server": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --disable-host-check --open --mode development",
     "test": "jest --passWithNoTests",
     "test:watch": "jest --watch",
