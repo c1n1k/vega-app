@@ -1,7 +1,6 @@
 import React from 'react';
 import { presetGpnDark, Theme } from '@gpn-prototypes/vega-ui';
 
-import { Header } from './components/Header/Header';
 import { Main } from './components/Main/Main';
 import { Navigation } from './components/Navigation/Navigation';
 
@@ -13,7 +12,6 @@ export const App = (): React.ReactElement => {
   return (
     <div className="fem">
       <Theme className="App" preset={presetGpnDark}>
-        <Header />
         <Navigation />
         <Main />
       </Theme>
