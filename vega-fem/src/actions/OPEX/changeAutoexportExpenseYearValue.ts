@@ -44,7 +44,7 @@ export function autoexportChangeExpenseYearValue(
     dispatch(OPEXAutoexportChangeExpenseYearValueInit());
 
     try {
-      const response = await fetch(`/graphql/${projectIdFromLocalStorage()}`, {
+      const response = await fetch(`http://outsourcing.nat.tepkom.ru:38300/graphql/${projectIdFromLocalStorage()}`, {
         method: 'POST',
         headers: headers(),
         body: JSON.stringify({
